@@ -1,6 +1,6 @@
 name: fut_map
 description: Concurrent futures map. Allows setting a concurrency level when mapping an iterable with futures
 homepage: https://github.com/bekindsoft/fut_map
-version: 0.0.2
+version: 0.0.3
 environment:
   sdk: '>=2.12.0 <3.0.0'
