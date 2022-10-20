@@ -22,7 +22,8 @@ Future<Iterable<U>> fMap<T, U>(
         fut.whenComplete(() => futures.remove(fut));
         running++;
       } else {
-        await Future.any(futures);
+        // wait for the rest of the missions after we're done with the iterable
+        await Future.wait(futures);
       }
     } else {
       // wait for any of the futures to finish in order to go to the next
